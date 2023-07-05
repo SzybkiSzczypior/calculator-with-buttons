@@ -5,17 +5,26 @@
     </head>
     <body>
        <div class="container"> 
-        <div class="temp"><div id="display"></div></div>
+        <div class="temp"><div id="display" name="display"></div></div>
         <div class="temp"><div class="item">7</div> <div class="item">8</div> <div class="item">9</div></div>
        <div class="temp"> <div class="item">4</div> <div class="item">5</div> <div class="item">6</div></div>
        <div class="temp"> <div class="item">1</div> <div class="item">2</div> <div class="item">3</div></div>
     <div class="temp"><div class="item">0</div><div class="item">=</div> <div class="item">=</div></div>
-    <div class="temp"><div class="item" onclick=" say()">-</div> <div class="item">:</div> <div class="item">*</div></div>
+    <div class="temp"><div class="item" value="13" onclick="say()">-</div> <div class="item">:</div> <div class="item">*</div></div>
         </div>
         <script>
-            var x = 1;
-            function say( x=1) {
-                alert("goodmorning");
+            
+            function say() {
+                var display= document.getElementById("display");
+                var item=document.getElementsByClassName("item").value;
+                switch (item) {
+                    case 13:
+                    display.innerHTML= "-";
+                        break;
+                
+                    default:
+                        break;
+                }
             }
         </script>
     </body>
